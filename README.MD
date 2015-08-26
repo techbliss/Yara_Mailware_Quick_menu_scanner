@@ -50,7 +50,15 @@ then
 Add_Yara_Pattern_scanner_rmenu_To_right_click_folder.reg
 ```
 
+
+Folder scan
 ![v7ssh](https://cloud.githubusercontent.com/assets/3592375/9501061/35b4d4b2-4c29-11e5-8288-292853d9ec54.jpg)
+
+File scan
+![ouezs](https://cloud.githubusercontent.com/assets/3592375/9501143/b18e5874-4c29-11e5-868d-7f3a7ddcaa1f.jpg)
+
+Result
+![allqk](https://cloud.githubusercontent.com/assets/3592375/9501146/b4af6692-4c29-11e5-97c1-04b4f554ab69.jpg)
 
 
 
