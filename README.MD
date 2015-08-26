@@ -49,6 +49,11 @@ then
 ```
 Add_Yara_Pattern_scanner_rmenu_To_right_click_folder.reg
 ```
+
+![v7ssh](https://cloud.githubusercontent.com/assets/3592375/9501061/35b4d4b2-4c29-11e5-8288-292853d9ec54.jpg)
+
+
+
 regards
 
 
