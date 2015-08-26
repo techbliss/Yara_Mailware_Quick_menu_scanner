@@ -41,14 +41,15 @@ https://github.com/plusvic/yara/releases/tag/v3.4.0
 after you have extracted everything accoring to the folder i explained.
 
 run
-
-```Add_Yara_Pattern_scanner_rmenu_To_right_click_file.reg
+```
+Add_Yara_Pattern_scanner_rmenu_To_right_click_file.reg
 ```
 
 then
-
-```Add_Yara_Pattern_scanner_rmenu_To_right_click_folder.reg
 ```
+Add_Yara_Pattern_scanner_rmenu_To_right_click_folder.reg
+```
+regards
 
 
 
