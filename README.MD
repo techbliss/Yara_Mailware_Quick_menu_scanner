@@ -5,29 +5,32 @@ What it Does
 Right click a folder
 Scan folders and subfolder files recursive for
 
-Antidebug
+```Antidebug
 Crypto patterns
 Hacking Team Mailware
 Packers
 Malicious documents
+```
 
 Right Click a File
 
 Scan files for
 
-Antidebug
+```Antidebug
 Crypto patterns
 Hacking Team Mailware
 Packers
 Malicious documents
+```
 
 Install
 
 Since its really just alot of registry based commands, you have to have the files at,
 
-C:\yara\yara32.exe
+```C:\yara\yara32.exe
 C:\yara\icons\
 C:\yara\mailware\
+```
 
 I have added all rules to date, but if you wanna do it yourself, grap new yara rules from.
 https://github.com/Yara-Rules/rules
@@ -39,11 +42,13 @@ after you have extracted everything accoring to the folder i explained.
 
 run
 
-Add_Yara_Pattern_scanner_rmenu_To_right_click_file.reg
+```Add_Yara_Pattern_scanner_rmenu_To_right_click_file.reg
+```
 
 then
 
-Add_Yara_Pattern_scanner_rmenu_To_right_click_folder.reg
+```Add_Yara_Pattern_scanner_rmenu_To_right_click_folder.reg
+```
 
 
 
