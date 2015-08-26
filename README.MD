@@ -27,7 +27,8 @@ Install
 
 Since its really just alot of registry based commands, you have to have the files at,
 
-```C:\yara\yara32.exe
+```
+C:\yara\yara32.exe
 C:\yara\icons\
 C:\yara\mailware\
 ```
