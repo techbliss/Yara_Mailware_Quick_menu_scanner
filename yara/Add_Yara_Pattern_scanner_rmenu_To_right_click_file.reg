@@ -9,62 +9,65 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Antidebug]
 "Icon"="C:\\yara\\icons\\anti.ico"
-"MUIVerb"=""
+"MUIVerb"="Scan for Antidebug"
 "SubCommands"=""
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Antidebug\shell]
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Antidebug\shell\Scan File]
+"MuiVerb"="Scan File"
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Antidebug\shell\Scan File\command]
 @="cmd /k \"\"C:\\yara\\yara32.exe\" \"-g\" \"-m\" \"-s\" \"-e\" \"C:\\yara\\antidebug.yar\" \"%1\"\""
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Crypto pattern]
 "Icon"="C:\\yara\\icons\\key.ico"
-"MUIVerb"=""
+"MUIVerb"="Scan for Crypto pattern"
 "SubCommands"=""
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Crypto pattern\shell]
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Crypto pattern\shell\Scan File]
-"Icon"=""
+"MuiVerb"="Scan File"
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Crypto pattern\shell\Scan File\command]
 @="cmd /k \"\"C:\\yara\\yara32.exe\" \"-g\" \"-m\" \"-s\" \"-e\" \"C:\\yara\\crypto.yar\" \"%1\"\""
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Hackingteam Mailware]
-"MUIVerb"=""
+"MUIVerb"="Scan for Hackingteam Mailware"
 "SubCommands"=""
 "Icon"="C:\\yara\\icons\\money.ico"
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Hackingteam Mailware\shell]
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Hackingteam Mailware\shell\Scan File]
-"Icon"=""
+"MuiVerb"="Scan File"
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Hackingteam Mailware\shell\Scan File\command]
 @="cmd /k \"\"C:\\yara\\yara32.exe\" \"-g\" \"-m\" \"-s\" \"-e\" \"C:\\yara\\malware\\APT_HackingTeam.yar\" \"%1\"\""
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Malicious Document]
-"MUIVerb"=""
+"MUIVerb"="Scan for Malicious Document"
 "Icon"="C:\\yara\\icons\\spybot.ico"
 "SubCommands"=""
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Malicious Document\shell]
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Malicious Document\shell\Scan File]
+"MuiVerb"="Scan File"
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan for Malicious Document\shell\Scan File\command]
 @="cmd /k \"\"C:\\yara\\yara32.exe\" \"-g\" \"-m\" \"-s\" \"-e\" \"C:\\yara\\malicious_document.yar\" \"%1\"\""
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan For packers]
 "Icon"="C:\\yara\\icons\\software.ico"
-"MUIVerb"=""
+"MUIVerb"="Scan For packers"
 "SubCommands"=""
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan For packers\shell]
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan For packers\shell\Scan File]
+"MuiVerb"="Scan File"
 
 [HKEY_CLASSES_ROOT\*\shell\Yara pattern scanner\shell\Scan For packers\shell\Scan File\command]
 @="cmd /k \"\"C:\\yara\\yara32.exe\" \"-g\" \"-m\" \"-s\" \"-e\" \"C:\\yara\\packer.yar\" \"%1\"\""
