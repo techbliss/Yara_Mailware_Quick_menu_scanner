@@ -5,7 +5,7 @@ This is for adding the awsome Yara pattern scanner to windows right click menus.
 ```
 Changelog 1.2
 Added Peid signatures made by Didier Stevens http://blog.didierstevens.com/
-Added Malicious Documents scripts since there are multiple now(also by Didier Stevens)
+Added Malicious Documents scripts since there are multiple now.
 Change right name for anti VM
 small fixes for win 7 and xp users.
 ```
