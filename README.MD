@@ -1,4 +1,16 @@
+Version 1.2
 This is for adding the awsome Yara pattern scanner to windows right click menus.
+
+
+```
+Changelog 1.2
+Added Peid signatures made by Didier Stevens http://blog.didierstevens.com/
+Added Malicious Documents scripts since there are multiple now
+Change right name for anti VM
+small fixes for win 7 and xp users.
+```
+
+
 
 What it Does
 
@@ -9,7 +21,8 @@ Scan folders and subfolder files recursive for
 Crypto patterns
 Hacking Team Mailware
 Packers
-Malicious documents
+Malicious documents / with more options
+PEID signatures
 ```
 
 Right Click a File
@@ -20,7 +33,8 @@ Scan files for
 Crypto patterns
 Hacking Team Mailware
 Packers
-Malicious documents
+Malicious documents / with more options
+PEID signatures
 ```
 
 Install

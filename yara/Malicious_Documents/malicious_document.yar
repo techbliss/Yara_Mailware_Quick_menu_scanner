@@ -3,7 +3,7 @@
 
 */
 
-rule maldoc_API_hashing
+rule maldoc_API_hashing : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -14,7 +14,9 @@ rule maldoc_API_hashing
         any of them
 }
 
-rule maldoc_function_prolog_signature
+// 20150909 - Issue #39 - Commented because of High FP rate
+/*
+rule maldoc_function_prolog_signature : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -27,8 +29,11 @@ rule maldoc_function_prolog_signature
     condition:
         any of them
 }
+*/
 
-rule maldoc_structured_exception_handling
+// 20150909 - Issue #39 - Commented because of High FP rate
+/*
+rule maldoc_structured_exception_handling : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -38,8 +43,9 @@ rule maldoc_structured_exception_handling
     condition:
         any of them
 }
+*/
 
-rule maldoc_indirect_function_call_1
+rule maldoc_indirect_function_call_1 : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -49,7 +55,7 @@ rule maldoc_indirect_function_call_1
         for any i in (1..#a): (uint8(@a[i] + 2) == uint8(@a[i] + 5))
 }
 
-rule maldoc_indirect_function_call_2
+rule maldoc_indirect_function_call_2 : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -59,7 +65,7 @@ rule maldoc_indirect_function_call_2
         for any i in (1..#a): ((uint8(@a[i] + 2) == uint8(@a[i] + 8)) and (uint8(@a[i] + 3) == uint8(@a[i] + 9)) and (uint8(@a[i] + 4) == uint8(@a[i] + 10)) and (uint8(@a[i] + 5) == uint8(@a[i] + 11)))
 }
 
-rule maldoc_indirect_function_call_3
+rule maldoc_indirect_function_call_3 : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -69,7 +75,7 @@ rule maldoc_indirect_function_call_3
         $a
 }
 
-rule maldoc_find_kernel32_base_method_1
+rule maldoc_find_kernel32_base_method_1 : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -80,7 +86,7 @@ rule maldoc_find_kernel32_base_method_1
         any of them
 }
 
-rule maldoc_find_kernel32_base_method_2
+rule maldoc_find_kernel32_base_method_2 : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -90,7 +96,7 @@ rule maldoc_find_kernel32_base_method_2
         for any i in (1..#a): ((uint8(@a[i] + 1) >= 0xC0) and (((uint8(@a[i] + 1) & 0x38) >> 3) == (uint8(@a[i] + 1) & 0x07)) and ((uint8(@a[i] + 2) & 0xF8) == 0xA0) and (uint8(@a[i] + 6) <= 0x3F) and (((uint8(@a[i] + 6) & 0x38) >> 3) != (uint8(@a[i] + 6) & 0x07)))
 }
 
-rule maldoc_find_kernel32_base_method_3
+rule maldoc_find_kernel32_base_method_3 : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -100,7 +106,7 @@ rule maldoc_find_kernel32_base_method_3
         for any i in (1..#a): (((uint8(@a[i] + 5) & 0x07) == (uint8(@a[i] + 8) & 0x07)) and (uint8(@a[i] + 8) <= 0x3F) and (((uint8(@a[i] + 8) & 0x38) >> 3) != (uint8(@a[i] + 8) & 0x07)))
 }
 
-rule maldoc_getEIP_method_1
+rule maldoc_getEIP_method_1 : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -110,7 +116,7 @@ rule maldoc_getEIP_method_1
         $a
 }
 
-rule maldoc_getEIP_method_4
+rule maldoc_getEIP_method_4 : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -121,7 +127,7 @@ rule maldoc_getEIP_method_4
         any of them
 }
 
-rule maldoc_OLE_file_magic_number
+rule maldoc_OLE_file_magic_number : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -131,7 +137,9 @@ rule maldoc_OLE_file_magic_number
         $a
 }
 
-rule maldoc_suspicious_strings
+// 20150909 - Issue #39 - Commented because of High FP rate
+/*
+rule maldoc_suspicious_strings : maldoc
 {
     meta:
         author = "Didier Stevens (https://DidierStevens.com)"
@@ -155,8 +163,9 @@ rule maldoc_suspicious_strings
     condition:
         any of them
 }
+*/
 
-rule mwi_document : exploitdoc
+rule mwi_document: exploitdoc maldoc
 {
     meta:
         description = "MWI generated document"
@@ -172,7 +181,7 @@ rule mwi_document : exploitdoc
         all of them
 }
 
-rule macrocheck
+rule macrocheck : maldoc
 {
     meta:
         Author      = "Fireeye Labs"
@@ -193,7 +202,7 @@ rule macrocheck
     condition:
         all of ($PARAM*) or (($invalid or $userloginform or $userform) and ($up1 or $up2))
 }
-rule office_document_vba
+rule office_document_vba : maldoc
 {
 	meta:
 		description = "Office document with embedded VBA"
@@ -216,7 +225,7 @@ rule office_document_vba
 		($officemagic at 0 and any of ($97str*)) or ($zipmagic at 0 and any of ($xmlstr*))
 }
 
-rule Office_AutoOpen_Macro {
+rule Office_AutoOpen_Macro : maldoc {
 	meta:
 		description = "Detects an Microsoft Office file that contains the AutoOpen Macro function"
 		author = "Florian Roth"
@@ -234,4 +243,50 @@ rule Office_AutoOpen_Macro {
 		$s2 = "Macros" wide fullword
 	condition:
 		uint32be(0) == 0xd0cf11e0 and all of ($s*) and filesize < 300000
+}
+
+rule Embedded_EXE_Cloaking : maldoc {
+    meta:
+        description = "Detects an embedded executable in a non-executable file"
+        author = "Florian Roth"
+        date = "2015/02/27"
+        score = 80
+    strings:
+        $noex_png = { 89 50 4E 47 }
+        $noex_pdf = { 25 50 44 46 }
+        $noex_rtf = { 7B 5C 72 74 66 31 }
+        $noex_jpg = { FF D8 FF E0 }
+        $noex_gif = { 47 49 46 38 }
+        $mz  = { 4D 5A }
+        $a1 = "This program cannot be run in DOS mode"
+        $a2 = "This program must be run under Win32"       
+    condition:
+        (
+            ( $noex_png at 0 ) or
+            ( $noex_pdf at 0 ) or
+            ( $noex_rtf at 0 ) or
+            ( $noex_jpg at 0 ) or
+            ( $noex_gif at 0 )
+        )
+        and
+        for any i in (1..#mz): ( @a1 < ( @mz[i] + 200 ) or @a2 < ( @mz[i] + 200 ) )
+}
+
+rule RTF_Shellcode : maldoc
+{
+meta:
+
+                author = "RSA-IR – Jared Greenhill"
+                date = "01/21/13"
+                description = "identifies RTF's with potential shellcode"
+                filetype = "RTF"
+
+
+
+strings:
+                $rtfmagic={7B 5C 72 74 66}
+                $scregex=/[39 30]{2,20}/
+condition:
+
+                ($rtfmagic at 0) and ($scregex)
 }

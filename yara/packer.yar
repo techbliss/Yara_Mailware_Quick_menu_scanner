@@ -59,6 +59,8 @@ rule Borland
 		$patternBorland 
 }
 
+// 20150909 - Issue #39 - Commented because of High FP rate
+/*
 rule java 
 {
       meta:
@@ -68,18 +70,7 @@ rule java
 	condition:
 		$patternjava
 }
-rule NET 
-{
-      meta:
-		author="malware-lu"
-	strings:
-		
-		$patternnet = ".NET" wide ascii
-	condition:
-		$patternnet
-}
-
-
+*/
 rule MSLRHv032afakePCGuard4xxemadicius
 {
       meta:
@@ -12062,7 +12053,8 @@ condition:
 		$a0 at pe.entry_point
 }
 	
-	
+// 20150909 - Issue #39 - Commented because of High FP rate
+/*
 rule Armadillov171
 {
       meta:
@@ -12073,7 +12065,7 @@ strings:
 condition:
 		$a0 at pe.entry_point
 }
-	
+*/
 	
 rule KBySV022shoooo
 {
